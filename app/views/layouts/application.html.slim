@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+      | 10ちゃんねる
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body.bg-light
+    / ナビゲーションバー
+    .app-title.navbar.navbar-expand-md.navbar-light.bg-white
+      .navbar-brand 10ちゃんねる
+
+      ul.navbar-nav.ml-auto
+        - if current_user
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'ログイン', new_user_session_path
+          = link_to '新規登録', new_user_registration_path
+
+    p.notice = notice
+    p.alert = alert
+    .container.row.col-lg-8
+      = yield

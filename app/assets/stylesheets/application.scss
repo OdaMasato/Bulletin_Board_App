@@ -1,0 +1,59 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post-item-box {
+  background: #fff;
+  margin-top: .9rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.thread_title {
+  word-break: break-word;
+  font-size: 18px;
+  color: black;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.thread_content {
+  font-size: 14px
+}
+
+.thread_box_wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.thread_icon {
+  text-align: right;
+}
+
+.various_btn {
+  text-align: right;
+  padding-top: 10px;
+  margin-left: auto;
+}
+
+.title {
+  color: #485269;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}

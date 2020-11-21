@@ -1,0 +1,19 @@
+.row.col-lg-12
+  .h1.title
+    = @board.name
+
+.container.post-item-box
+  p#notice = notice
+  .row.col-lg-12
+    = @board.user_id
+    = @board.updated_at
+
+  .row.col-lg-12
+    = @board.content
+  .row.col-lg-12
+
+  .thread_icon
+    = link_to edit_board_path(@board)
+      i.fas.fa-pen
+
+= link_to '戻る', boards_path

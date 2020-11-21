@@ -1,0 +1,22 @@
+= link_to '新規スレッドを作成', new_board_path, class: 'various_btn'
+
+- @boards.each do |board|
+  .container.post-item-box
+    .row
+      .col-lg-2
+        / イメージ画像
+        = image_tag "/assets/モナー.jpeg", class: 'thread_box_wrap'
+      .col-lg-10
+        / タイトル
+        = link_to board.name, board, class: 'thread_title'
+    .row
+      .col-lg-12.thread_content
+        / コンテンツ
+        = board.content
+
+    .row
+      .col-lg-12.thread_icon
+        = link_to edit_board_path(board)
+          i.fas.fa-pen
+        = link_to board, data: { confirm: 'このスレッドを削除してもよろしいですか？' }, method: :delete
+          i.fas.fa-trash-alt
